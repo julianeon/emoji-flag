@@ -11,6 +11,10 @@ It's also like one page of code, with 5 components, only 2 of which are longer t
 
 It's not complicated.
 
+You can see the code on Git here:
+
+https://github.com/julianeon/emoji-flag
+
 ### How to Run
 
 Remix it from Glitch or clone it from GitHub then cd into dir and 'yarn start'.
