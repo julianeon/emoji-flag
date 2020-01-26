@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import _ from 'lodash'
+import { Grid, Image } from 'semantic-ui-react'
+
+const columns = _.times(16, (i) => (
+  <Grid.Column key={i}>
+    <Image src='happy.png' />
+  </Grid.Column>
+))
+
+const GridRow = () => <Grid>{columns}</Grid>
+      
+const rows = _.times(10, (i) => (  <GridRow/> ))
+
+const GridPage = () => <div>{rows}</div>
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <GridPage/>
     </div>
   );
 }
